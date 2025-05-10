@@ -1,0 +1,80 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"suspicious": {
+				"noConsoleLog": "error"
+			},
+			"correctness": {
+				"noUnusedImports": "error"
+			},
+			"style": {
+				"noUnusedTemplateLiteral": "off",
+				"useNamingConvention": {
+					"fix": "unsafe",
+					"level": "error",
+					"options": {
+						"requireAscii": true,
+						"strictCase": false,
+						"conventions": [
+							{
+								"selector": {
+									"kind": "typeLike"
+								},
+								"match": "_(.*)|(.*)",
+								"formats": ["PascalCase"]
+							},
+							{
+								"selector": {
+									"kind": "objectLiteralMember"
+								},
+								"formats": ["camelCase", "snake_case"]
+							},
+							{
+								"selector": {
+									"kind": "functionParameter"
+								},
+								"formats": ["camelCase"],
+								"match": "_(.*)|(.*)"
+							},
+							{
+								"selector": {
+									"kind": "function"
+								},
+								"formats": ["camelCase", "PascalCase"]
+							}
+						]
+					}
+				}
+			}
+		}
+	},
+	"formatter": {
+		"enabled": true,
+		"lineWidth": 100,
+		"formatWithErrors": false,
+		"indentWidth": 2
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single",
+			"enabled": true
+		}
+	},
+	"json": {
+		"formatter": {
+			"enabled": true
+		},
+		"linter": {
+			"enabled": true
+		}
+	},
+	"files": {
+		"ignore": [".vscode"]
+	}
+}
