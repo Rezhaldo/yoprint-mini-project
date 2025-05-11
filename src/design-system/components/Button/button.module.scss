@@ -1,0 +1,78 @@
+@import "../../tokens/tokens.scss";
+
+.button-color {
+  &--color {
+    &-primary {
+      --base-color: #{$content-content-primary};
+      --text-color: #{$content-content-white};
+    }
+    &-disabled {
+      --base-color: #{$content-content-disabled};
+      --text-color: #{$content-content-white};
+    }
+    &-success {
+      --base-color: #{$content-content-success};
+      --text-color: #{$content-content-white};
+    }
+    &-error {
+      --base-color: #{$content-content-error};
+      --text-color: #{$content-content-white};
+    }
+    &-warning {
+      --base-color: #{$content-content-warning};
+      --text-color: #{$content-content-white};
+    }
+    &-info {
+      --base-color: #{$content-content-info};
+      --text-color: #{$content-content-white};
+    }
+    &-text {
+      --base-color: #{$content-content-text};
+      --text-color: #{$content-content-white};
+    }
+  }
+}
+
+.button {
+  border-radius: $border-radius-button;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.text {
+  color: var(--base-color);
+}
+
+.outline-button {
+  border-width: 1px;
+  border-style: solid;
+}
+
+.outline {
+  @extend .outline-button;
+  border-color: var(--base-color);
+  color: var(--base-color);
+}
+
+.contained {
+  background-color: var(--base-color);
+  color: var(--text-color);
+}
+
+// Disabled State
+.text-disabled {
+  color: $lightbloom-150 !important;
+}
+
+.outline-disabled {
+  @extend .outline-button;
+  border-color: $lightbloom-150;
+  color: $lightbloom-150 !important;
+}
+
+.contained-disabled {
+  background-color: $content-content-text;
+  color: $content-content-white !important;
+}

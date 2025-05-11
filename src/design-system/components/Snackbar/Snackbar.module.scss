@@ -1,0 +1,51 @@
+@import "../../tokens/tokens.scss";
+
+.Container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  border-radius: $border-radius-table;
+  padding: $padding;
+  padding-right: 0;
+  color: $content-content-white;
+  max-width: 500px;
+  align-items: center;
+
+  & p {
+    color: $content-content-white;
+  }
+
+  & .ContentWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  & .ContentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.Success {
+  background-color: $content-content-success;
+}
+
+.Warning {
+  background-color: $content-content-warning;
+}
+
+.Error {
+  background-color: $content-content-error;
+}
+
+.Info {
+  background-color: $content-content-info;
+}
+
+.Button {
+  color: $content-content-white !important;
+  padding: 0;
+}

@@ -1,0 +1,45 @@
+
+.heading-generate-weight {
+  &--type {
+    &-regular {
+      --font-weight: regular;
+    }
+    &-medium {
+      --font-weight: medium;
+    }
+    &-semibold {
+      --font-weight: semibold;
+    }
+    &-bold {
+      --font-weight: bold;
+    }
+  }
+}
+
+.heading-font-color {
+  &--type {
+    &-default {
+      color: #223354;
+    }
+    &-success {
+      color: #44d600;
+    }
+    &-error {
+      color: #ff1a43;
+    }
+    &-warning {
+      color: #ffa31a;
+    }
+    &-info {
+      color: #33c2ff;
+    }
+    &-brand {
+      color: #215bed;
+    }
+  }
+}
+
+.heading-subtitle {
+  font-size: 16px;
+  font-weight: var(--font-weight);
+}
