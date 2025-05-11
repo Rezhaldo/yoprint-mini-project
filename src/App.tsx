@@ -1,24 +1,34 @@
-import './App.css';
-import logo from './logo.svg';
+// Material
+import { Zoom } from '@mui/material';
+
+// Component
+import { CustomSnackBarContent } from '@design-system/components';
+
+// Snackbar
+import { SnackbarProvider } from 'notistack';
+
+import ThemeProvider from './theme/ThemeProvider';
+
+// Router
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
 
 function App() {
 	return (
-		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-					Edit <code>App.tsx</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
-		</div>
+		<SnackbarProvider
+			Components={CustomSnackBarContent}
+			maxSnack={6}
+			anchorOrigin={{
+				vertical: 'top',
+				horizontal: 'right',
+			}}
+			TransitionComponent={Zoom}
+			autoHideDuration={3000}
+		>
+			<ThemeProvider>
+				<RouterProvider router={router} />
+			</ThemeProvider>
+		</SnackbarProvider>
 	);
 }
 
