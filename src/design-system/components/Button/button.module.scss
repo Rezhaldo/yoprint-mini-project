@@ -3,7 +3,7 @@
 .button-color {
   &--color {
     &-primary {
-      --base-color: #{$content-content-primary};
+     --base-color: #{$content-content-warning};
       --text-color: #{$content-content-white};
     }
     &-disabled {
@@ -19,7 +19,7 @@
       --text-color: #{$content-content-white};
     }
     &-warning {
-      --base-color: #{$content-content-warning};
+       --base-color: #{$content-content-primary};
       --text-color: #{$content-content-white};
     }
     &-info {
