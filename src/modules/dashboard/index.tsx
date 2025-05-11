@@ -1,7 +1,9 @@
 import { Navigate } from 'react-router-dom';
-import { SearchPage } from './pages/search-list/SearchPage';
-
 import AccentSidebarLayout from '../../layouts/index';
+
+// Pages
+import { AnimeDetail } from './pages/anime-detail';
+import { SearchPage } from './pages/search-list/ui/SearchPage';
 
 export const dashboardRouter = {
 	path: '/dashboard',
@@ -11,6 +13,10 @@ export const dashboardRouter = {
 		{
 			path: 'list',
 			element: <SearchPage />,
+		},
+		{
+			path: ':id/detail',
+			element: <AnimeDetail />,
 		},
 	],
 };

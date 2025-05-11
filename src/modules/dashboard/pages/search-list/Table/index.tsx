@@ -24,6 +24,7 @@ export function Table<T extends object>({
 	handleSearch,
 	onChangePage,
 	onChangeRowPerPage,
+	onItemClick,
 	searchPlaceholder,
 }: TableProps<T>) {
 	return (
@@ -40,8 +41,14 @@ export function Table<T extends object>({
 
 			<Box py={2} px={2}>
 				<Grid container spacing={2}>
-					{dataSource?.map((item, idx) => (
-						<Grid direction="column" container alignItems={'center'} key={item.key}>
+					{dataSource?.map((item) => (
+						<Grid
+							direction="column"
+							container
+							alignItems={'center'}
+							key={item.key}
+							onClick={() => onItemClick?.(item.key)}
+						>
 							<Box sx={{ width: 225, height: 400, overflow: 'hidden', borderRadius: 2 }}>
 								<img
 									src={item?.image}

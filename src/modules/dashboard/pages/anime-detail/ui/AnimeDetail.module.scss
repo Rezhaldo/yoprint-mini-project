@@ -1,0 +1,109 @@
+@import "../../../../../design-system/tokens/tokens.scss";
+
+.Container {
+    color: $text-text-primary;
+    padding: $padding;
+    border: 1px solid $border-border-black-softest;
+
+    & .TopSection {
+        justify-content: space-between;
+        align-items: center;
+
+        & .TitleContainer {
+            flex-direction: column;
+            gap: 10px;
+            border: 1px  $border-border-black-softest;
+        }
+    }
+
+    & .SubcriptionSection {
+        justify-content: space-between;
+        background-color: $content-content-white;
+
+        & .TitleContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    & .ActionSection {
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+     & .Card {
+    border-radius: $border-radius-button;
+    background-color: $content-content-white;
+
+    & .CardContentContainer {
+      padding: $padding;
+
+      & .BorderContainer {
+        border: 1px solid $border-border-black-softest;
+        border-radius: $border-radius-button;
+        padding: $padding;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  }
+
+ 
+}
+
+
+.StatusContainer {
+    display: inline-block;
+    border-radius: $border-radius-button;
+    padding: 1rem;
+    margin: 2rem 0.5rem;
+
+    &-rating {
+        background-color: $content-content-error;
+
+        & p {
+            color: $content-content-white;
+        }
+    }
+
+    &-episode {
+        background-color: $button-button-secondary;
+
+        & p {
+            color: $content-content-white;
+        }
+    }
+
+    &-active {
+        background-color: $content-content-success;
+
+        & p {
+            color: $content-content-white;
+        }
+    }
+    &-popular {
+        background-color: $content-content-warning;
+        & p {
+            color: $content-content-white;
+        }
+    }
+     &-rank {
+        background-color: $content-content-info;
+        & p {
+            color: $content-content-white;
+        }
+    }
+     &-favorite {
+        background-color: $content-content-primary;
+        & p {
+            color: $content-content-white;
+        }
+    }
+}
+
+.PopOverContainer {
+    cursor: pointer;
+    padding: 1rem;
+}

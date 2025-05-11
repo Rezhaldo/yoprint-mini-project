@@ -8,6 +8,7 @@ export interface TableProps<T extends object> extends GeneralTableProps {
 	dataSource: DataSource<T>[];
 	columns: ColumnType<T>[];
 	expandedRowRender?: (data: DataSource<T>) => JSX.Element;
+	onItemClick?: (id: string) => void;
 }
 
 export type ColumnType<T extends object> = {
