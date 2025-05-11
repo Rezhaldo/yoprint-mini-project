@@ -1,0 +1,15 @@
+@import "../../../../../../design-system/tokens/tokens.scss";
+
+.searchInput {
+  width: 100%;
+}
+
+.searchIcon {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.toolbarContainer {
+  gap: 16px;
+  flex-wrap: wrap;
+}
