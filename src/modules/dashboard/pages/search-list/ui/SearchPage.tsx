@@ -2,18 +2,22 @@
 import { Box, Grid } from '@mui/material';
 
 // API
-import { useGetListAnime } from './api/get-anime-list';
+import { useGetListAnime } from '../api/get-anime-list';
 
 // Component
 import { Typography } from '@design-system/components';
 
 //Icons
 
+import { useNavigate } from 'react-router-dom';
+import { Table } from '../Table';
 // Styles
 import styles from './SearchPage.module.scss';
-import { Table } from './Table';
 
 export function SearchPage() {
+	// #region hooks
+	const navigate = useNavigate();
+
 	const {
 		animeList,
 		isLoading,
@@ -25,6 +29,7 @@ export function SearchPage() {
 		onChangeRowPerPage,
 		handleSearch,
 	} = useGetListAnime();
+	// #endregion
 
 	// #region data
 	const animeListDataSource = animeList.map((data) => {
@@ -33,6 +38,12 @@ export function SearchPage() {
 			key: data.id.toString(),
 		};
 	});
+	// #endregion
+
+	// #region functions
+	const navigateToDetail = (id: string) => {
+		navigate(`/dashboard/${id}/detail`);
+	};
 	// #endregion
 
 	return (
@@ -55,6 +66,7 @@ export function SearchPage() {
 				totalRecord={totalAnime}
 				toolbarTitle="Anime List"
 				handleSearch={handleSearch}
+				onItemClick={(id) => navigateToDetail(id)}
 				// pagination
 				page={page}
 				rowsPerPage={rowsPerPage}
