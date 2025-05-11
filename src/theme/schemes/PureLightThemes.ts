@@ -2,10 +2,10 @@ import '@mui/lab/themeAugmentation';
 import { alpha, createTheme, darken, lighten } from '@mui/material';
 
 const themeColors = {
-	primary: '#5569ff',
+	primary: '#FFA319',
 	secondary: '#6E759F',
 	success: '#57CA22',
-	warning: '#FFA319',
+	warning: '#5569ff',
 	error: '#FF1943',
 	info: '#33C2FF',
 	black: '#223354',
@@ -234,7 +234,6 @@ export const PureLightTheme = createTheme({
 		menuItemIconColorActive: colors.layout.sidebar.menuItemIconColorActive,
 		menuItemHeadingColor: colors.layout.sidebar.menuItemHeadingColor,
 		boxShadow: '2px 0 3px rgba(159, 162, 191, .18), 1px 0 1px rgba(159, 162, 191, 0.32)',
-		width: '280px',
 	},
 	header: {
 		height: '80px',
