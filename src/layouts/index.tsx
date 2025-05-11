@@ -10,8 +10,6 @@ interface AccentSidebarLayoutProps {
 const AccentSidebarLayout: React.FC<AccentSidebarLayoutProps> = () => {
 	const theme = useTheme();
 
-	console.log('theme.header:', theme.header); // Should NOT be undefined
-
 	return (
 		<>
 			<Header />
@@ -22,9 +20,7 @@ const AccentSidebarLayout: React.FC<AccentSidebarLayoutProps> = () => {
 					flex: 1,
 					display: 'flex',
 					pt: `${theme.header.height}`,
-					[theme.breakpoints.up('lg')]: {
-						pl: `${theme.sidebar.width}`,
-					},
+					px: 2,
 				}}
 			>
 				<Box

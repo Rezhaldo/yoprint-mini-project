@@ -1,5 +1,5 @@
 import { Navigate } from 'react-router-dom';
-import { SearchPage } from './pages/SearchPage';
+import { SearchPage } from './pages/search-list/SearchPage';
 
 import AccentSidebarLayout from '../../layouts/index';
 
