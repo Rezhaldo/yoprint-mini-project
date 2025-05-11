@@ -1,0 +1,43 @@
+@import "../../tokens/tokens.scss";
+
+.input {
+  > div {
+    border-radius: 10px;
+  }
+
+  input {
+    color: $states-common-black;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: regular;
+    padding: 1rem 1rem;
+  }
+
+  fieldset {
+    border-color: var(--color-border);
+  }
+
+  &--status {
+    &-normal {
+      --color-border: #97a1af;
+    }
+
+    &-error {
+      --color-border: #f64c4c;
+    }
+  }
+
+  &__adornment {
+    color: $content-content-text;
+
+    svg {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.disabled {
+  border-radius: 10px;
+  background-color: $border-border-black-softest;
+  color: $content-content-white !important;
+}

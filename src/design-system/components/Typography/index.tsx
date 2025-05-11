@@ -2,6 +2,7 @@ import type { ElementType, ReactNode } from 'react';
 import type { FontWeightType, TypographyColorVariant, TypographyVariant } from './TypographyType';
 
 import HeadingBody from './heading-body';
+import HeadingH1 from './heading-h1';
 import HeadingSubtitle from './heading-subtitle';
 
 type TypographyProps = {
@@ -20,6 +21,7 @@ export function Typography({
 	fontWeight,
 }: TypographyProps) {
 	const typography = {
+		h1: <HeadingH1 text={text} element={element} fontWeight={fontWeight} color={color} />,
 		body: <HeadingBody text={text} element={element} fontWeight={fontWeight} color={color} />,
 		subtitle: (
 			<HeadingSubtitle text={text} element={element} fontWeight={fontWeight} color={color} />
